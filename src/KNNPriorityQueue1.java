@@ -2,12 +2,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Collections;
 
-public class KNN {
+public class KNNPriorityQueue1 {
     private PointSet pointSet;
     private int k;
     private PriorityQueue1<LabelledPoint> priorityQueue;
 
-    public KNN(PointSet pointSet, int k) {
+    public KNNPriorityQueue1(PointSet pointSet, int k) {
         this.pointSet = pointSet;
         this.k = k;
         this.priorityQueue = new PriorityQueue1<>(k);
@@ -54,7 +54,7 @@ public class KNN {
 
         int k = 50; // Number of nearest neighbors to find
 
-        KNN knn = new KNN(pointSet, k);
+        KNNPriorityQueue1 knn = new KNNPriorityQueue1(pointSet, k);
         List<LabelledPoint> nearestNeighbors = new ArrayList<>();
 
         System.out.println(k+" Nearest Neighbors dataset size: "+ pointSet.getPointsList().size()+ " , query set size: "+queryPts.getPointsList().size());

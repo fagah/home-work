@@ -70,11 +70,6 @@ class LabelledPoint implements Comparable<LabelledPoint>{
 
     @Override
     public int compareTo(LabelledPoint other) {
-        // Implement your comparison logic here
-        // Return a negative value if this instance is "smaller" than the other
-        // Return 0 if they are equal
-        // Return a positive value if this instance is "larger" than the other
-        // For example, you can compare based on the key or any other criteria
         return Double.compare(this.key, other.getKey());
     }
 }
